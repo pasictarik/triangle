@@ -37,18 +37,30 @@ public class TriangleTest {
      */
     @Test
     public void testNumberOfSameSides1(){
-        Triangle t=new Triangle(3,2,2);
-        assertEquals(2,t.numberOfSameSides());
+        try{
+            Triangle t=new Triangle(3,2,2);
+            assertEquals(2,t.numberOfSameSides());
+        }catch(NotATriangleException e){
+            e.printStackTrace();
+        }
     }
     @Test
     public void testNumberOfSameSides2(){
-        Triangle t=new Triangle(3,3,3);
-        assertEquals(3,t.numberOfSameSides());
+        try{
+            Triangle t=new Triangle(3,3,3);
+            assertEquals(3,t.numberOfSameSides());
+        }catch(NotATriangleException e){
+            e.printStackTrace();
+        }
     }
     @Test
     public void testNumberOfSameSides3(){
-        Triangle t=new Triangle(3,6,4);
-        assertEquals(0,t.numberOfSameSides());
+        try{
+            Triangle t=new Triangle(3,2,4);
+            assertEquals(0,t.numberOfSameSides());
+        }catch(NotATriangleException e){
+            e.printStackTrace();
+        }
     }
     /**
      * These tests will test the method that will return a certain value depending
@@ -59,19 +71,32 @@ public class TriangleTest {
      */
     @Test
     public void testTypeOfTriangle1(){
-        Triangle t=new Triangle(3,4,4);
-        assertEquals(1,t.typeOfTriangle());
+        try{
+            Triangle t=new Triangle(3,4,4);
+            assertEquals(1,t.typeOfTriangle());
+        }
+        catch(NotATriangleException e){
+            e.printStackTrace();
+        }
     }
     @Test
     public void testTypeOfTriangle2(){
-        Triangle t=new Triangle(3,4,5);
-        assertEquals(2,t.typeOfTriangle());
+        try{
+            Triangle t=new Triangle(3,4,5);
+            assertEquals(2,t.typeOfTriangle());
+        }
+        catch(NotATriangleException e){
+            e.printStackTrace();
+        }
     }
     @Test
     public void testTypeOfTriangle3(){
-        Triangle t=new Triangle(3,4,6);
-        assertEquals(3,t.typeOfTriangle());
+        try{
+            Triangle t=new Triangle(3,4,6);
+            assertEquals(3,t.typeOfTriangle());
+        }
+        catch(NotATriangleException e){
+            e.printStackTrace();
+        }
     }
-    
-    
 }
